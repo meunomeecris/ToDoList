@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ToDoListView: View {
+    @State private var text: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            HStack{
+                TextField("Add To Do", text: $text)
+                    .font(.title)
+                Image(systemName: "plus.app.fill")
+                    .font(Font.system(size: 50))
+                    .foregroundColor(.blue)
+                    .navigationTitle("To do List")
+            }
+            .padding(.leading)
+            .padding(.trailing)
+            .frame(width: .infinity, height: 100)
+            .background(Color.gray.opacity(0.2))
         }
-        .padding()
+
     }
 }
 
