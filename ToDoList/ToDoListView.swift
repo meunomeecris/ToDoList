@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ToDoListView.swift
 //  ToDoList
 //
 //  Created by Cris Messias on 30/06/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ToDoListView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +19,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ToDoListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ToDoListView()
     }
 }
