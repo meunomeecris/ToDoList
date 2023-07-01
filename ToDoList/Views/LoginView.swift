@@ -12,33 +12,44 @@ struct LoginView: View {
     @State var password: String = ""
     
     var body: some View {
-        VStack{
-            //Header
-            HeaderView()
-            
-            //Login Form
-            Form {
-                TextField("Email", text: $email)
-                SecureField("Password", text: $password)
+        NavigationView {
+            VStack{
+                //Header
+                HeaderView()
                 
-                Button {
-                    //Attempt to login
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 25)
-                            .fill(Color.black)
-                            .frame(width: 300, height: 50)
-                        Text("Log In")
-                            .font(.system(size: 18))
-                            .foregroundColor(.white)
-                    }
+                //Login Form
+                Form {
+                    TextField("Email", text: $email)
+                    SecureField("Password", text: $password)
                     
+                    Button {
+                        //Attempt to login
+                    } label: {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.black)
+                                .frame(width: 300, height: 50)
+                            
+                            Text("Log In")
+                                .font(.system(size: 18))
+                                .foregroundColor(.white)
+                        }
+                        
+                    }
                 }
+                
+                
+                
+                //Create Account Link
+                VStack {
+                    Text("New around here?")
+                        .padding(.bottom, 8)
+                    NavigationLink("Create an account", destination: RegisterView())
+                }
+                .padding(.bottom, 40)
+                
+                Spacer()
             }
-            
-            //Create Account Link
-            
-            Spacer()
         }
     }
 }
