@@ -21,6 +21,12 @@ struct LoginView: View {
                 
                 //Login Form
                 Form {
+                    //Error Message
+                    if !loginViewModel.errorMessage.isEmpty {
+                        Text(loginViewModel.errorMessage)
+                            .foregroundColor(.red)
+                    }
+                    
                     TextField("Email", text: $loginViewModel.email)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
@@ -29,12 +35,13 @@ struct LoginView: View {
                     TLButton(
                         title: "Log in",
                         backgroundColor: .green,
-                        foregroundColor: .white)
-                    {
-                        //action
+                        foregroundColor: .white
+                    ) {
+                        loginViewModel.login()
                     }
+                    .padding()
                 }
-                .offset(y: -50)
+                .offset(y: -80)
                 
                 //Create Account Link
                 VStack {

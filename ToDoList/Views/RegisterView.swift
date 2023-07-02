@@ -31,12 +31,13 @@ struct RegisterView: View {
                 TLButton(
                     title: "Create",
                     backgroundColor: .teal,
-                    foregroundColor: .white)
-                {
+                    foregroundColor: .white
+                ) {
                     //action
                 }
+                .padding()
             }
-            .offset(y: -5)
+            .offset(y: -150)
         } //VStack
     } //body
 } //view

@@ -19,9 +19,9 @@ struct TLButton: View {
             action()
         } label: {
             ZStack{
-                RoundedRectangle(cornerRadius: 25)
+                RoundedRectangle(cornerRadius: 15)
                     .fill(backgroundColor)
-                    .frame(width: 300, height: 50)
+//                    .frame(width: 300, height: 30)
                 
                 Text(title)
                     .font(.system(size: 18))
