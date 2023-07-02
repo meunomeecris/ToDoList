@@ -5,6 +5,7 @@
 //  Created by Cris Messias on 30/06/23.
 //
 
+import FirebaseFirestore
 import FirebaseAuth
 import Foundation
 
@@ -16,7 +17,7 @@ class RegisterViewModel: ObservableObject {
     
     init() {}
     
-    //Create account
+    //Creating an account
     func register() {
         guard validateRegister() else {
             return
@@ -33,9 +34,20 @@ class RegisterViewModel: ObservableObject {
     
     //Put the data in a baseData
     private func insertUserRecord(id: String) {
+        let newUser = User(id: id,
+                           name: name,
+                           email: email,
+                           joined: Date().timeIntervalSince1970)
         
+        let dataBase = Firestore.firestore()
+        
+        //Creating a colection to put all user
+        dataBase.collection("users")
+            .document(id)
+            .setData(newUser.asDictionary())
     }
     
+    //Validating fields
     private func validateRegister() -> Bool {
         //reset the message
         errorMessage = ""
@@ -66,5 +78,4 @@ class RegisterViewModel: ObservableObject {
 }
 
 
-//1h:08
-//https://www.youtube.com/watch?v=t_mypMqSXNw
+//1h 20 

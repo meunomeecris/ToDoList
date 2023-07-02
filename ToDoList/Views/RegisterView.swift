@@ -19,6 +19,11 @@ struct RegisterView: View {
             
             //Form
             Form{
+                if !registerViewModel.errorMessage.isEmpty{
+                    Text(registerViewModel.errorMessage)
+                        .foregroundColor(.red)
+                }
+                
                 TextField("Full Name", text: $registerViewModel.name)
                     .autocorrectionDisabled()
                 TextField("Email Adress", text: $registerViewModel.email)
@@ -31,7 +36,7 @@ struct RegisterView: View {
                     backgroundColor: .teal,
                     foregroundColor: .white
                 ) {
-                    //action
+                    registerViewModel.register()
                 }
                 .padding() 
             }
