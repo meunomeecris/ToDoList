@@ -15,7 +15,7 @@ struct LoginView: View {
         NavigationView {
             VStack{
                 //Header
-                HeaderView()
+                HeaderView(title: "ToDo List", subtitle: "Get things done!", angle: 8, backgroundColor: .green)
                 
                 //Login Form
                 Form {
@@ -37,22 +37,22 @@ struct LoginView: View {
                         
                     }
                 }
-                
-                
+                .offset(y: -50)
                 
                 //Create Account Link
                 VStack {
                     Text("New around here?")
-                        .padding(.bottom, 8)
+                        .padding(.bottom, 2)
                     NavigationLink("Create an account", destination: RegisterView())
+                        .foregroundColor(Color.green)
                 }
                 .padding(.bottom, 40)
                 
                 Spacer()
-            }
-        }
-    }
-}
+            } //VStack
+        } //navigation
+    } //body
+} //view
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
