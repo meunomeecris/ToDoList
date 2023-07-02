@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HeaderView: View {
-    var title: String
-    var subtitle: String
-    var angle: Double
-    var backgroundColor: Color
+    let title: String
+    let subtitle: String
+    let angle: Double
+    let backgroundColor: Color
     
     var body: some View {
         ZStack{

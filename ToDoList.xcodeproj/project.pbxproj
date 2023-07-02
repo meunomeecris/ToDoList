@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A161AAE2A516C0000EFA246 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A161AAD2A516C0000EFA246 /* TLButton.swift */; };
 		8A2676D52A4F7256007D699B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A2676D42A4F7256007D699B /* GoogleService-Info.plist */; };
 		8A2676D82A4F784F007D699B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2676D72A4F784F007D699B /* FirebaseAuth */; };
 		8A2676DA2A4F784F007D699B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8A2676D92A4F784F007D699B /* FirebaseFirestore */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A161AAD2A516C0000EFA246 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		8A2676D42A4F7256007D699B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8A2676E12A4F7D3F007D699B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8A2676E32A4F7D53007D699B /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
@@ -77,11 +79,12 @@
 			children = (
 				8AF8219F2A4F50110009E686 /* MainView.swift */,
 				8A2676E72A4F7D66007D699B /* LoginView.swift */,
+				8A2676E92A4F7D6E007D699B /* RegisterView.swift */,
 				8A2676E12A4F7D3F007D699B /* ProfileView.swift */,
 				8A2676E32A4F7D53007D699B /* ToDoListView.swift */,
 				8A2676E52A4F7D5C007D699B /* NewItemView.swift */,
-				8A2676E92A4F7D6E007D699B /* RegisterView.swift */,
 				8A2676EB2A4F7DA0007D699B /* ToDoListItemView.swift */,
+				8A161AAD2A516C0000EFA246 /* TLButton.swift */,
 				8A2677032A4F822B007D699B /* HeaderView.swift */,
 			);
 			path = Views;
@@ -91,11 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				8A2676F12A4F7E6A007D699B /* MainViewModel.swift */,
+				8A2676FD2A4F7ED5007D699B /* LoginViewModel.swift */,
+				8A2676FF2A4F7EDD007D699B /* RegisterViewModel.swift */,
 				8A2676F32A4F7E78007D699B /* ProfileViewModel.swift */,
 				8A2676F52A4F7E85007D699B /* ToDoListViewModel.swift */,
 				8A2676FB2A4F7ECE007D699B /* NewItemViewModel.swift */,
-				8A2676FD2A4F7ED5007D699B /* LoginViewModel.swift */,
-				8A2676FF2A4F7EDD007D699B /* RegisterViewModel.swift */,
 				8A2677012A4F7EEA007D699B /* ToDoListItemViewModel.swift */,
 			);
 			path = ViewModels;
@@ -242,6 +245,7 @@
 				8A2677002A4F7EDD007D699B /* RegisterViewModel.swift in Sources */,
 				8A2676E42A4F7D53007D699B /* ToDoListView.swift in Sources */,
 				8A2676EA2A4F7D6E007D699B /* RegisterView.swift in Sources */,
+				8A161AAE2A516C0000EFA246 /* TLButton.swift in Sources */,
 				8A2676F42A4F7E78007D699B /* ProfileViewModel.swift in Sources */,
 				8A2676E22A4F7D3F007D699B /* ProfileView.swift in Sources */,
 				8A2676EE2A4F7E24007D699B /* User.swift in Sources */,
