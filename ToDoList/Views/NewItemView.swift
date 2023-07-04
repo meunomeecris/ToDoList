@@ -33,7 +33,7 @@ struct NewItemView: View {
                     backgroundColor: .teal,
                     foregroundColor: .white)
                 {
-                    if newItemViewModel.validateItem {
+                    if newItemViewModel.validatedItem {
                         newItemViewModel.save()
                         newItemPresented = false
                     } else {
