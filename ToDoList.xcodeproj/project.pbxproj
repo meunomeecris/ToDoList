@@ -98,8 +98,8 @@
 				8A2676F12A4F7E6A007D699B /* MainViewModel.swift */,
 				8A2676FD2A4F7ED5007D699B /* LoginViewModel.swift */,
 				8A2676FF2A4F7EDD007D699B /* RegisterViewModel.swift */,
-				8A2676F32A4F7E78007D699B /* ProfileViewModel.swift */,
 				8A2676F52A4F7E85007D699B /* ToDoListViewModel.swift */,
+				8A2676F32A4F7E78007D699B /* ProfileViewModel.swift */,
 				8A2676FB2A4F7ECE007D699B /* NewItemViewModel.swift */,
 				8A2677012A4F7EEA007D699B /* ToDoListItemViewModel.swift */,
 			);
