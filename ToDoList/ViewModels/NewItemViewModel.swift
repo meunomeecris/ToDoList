@@ -37,9 +37,6 @@ class NewItemViewModel: ObservableObject {
         )
         
         //Save model in the datebase
-        
-        
-        //Defining Database
         let database = Firestore.firestore()
         database.collection("users")
             .document(uID)
