@@ -1,5 +1,5 @@
 //
-//  ToDoListItem.swift
+//  ToDoListItemModel.swift
 //  ToDoList
 //
 //  Created by Cris Messias on 30/06/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ToDoListItem: Codable, Identifiable {
+struct ToDoListItemModel: Codable, Identifiable {
     let id: String
     let title: String
     let dueDate: TimeInterval
