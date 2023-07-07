@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ToDoListItemView: View {
-    let item: ToDoListItem
+    @StateObject var toDolistItemViewModel = ToDoListItemViewModel()
+    let item: ToDoListItemModel
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(item.title)
                     .bold()
-                    .font(Font.system(size: 24))
+                    .font(Font.system(size: 20))
                     .foregroundColor(.teal)
                 
                 Text("\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))")
@@ -24,14 +25,13 @@ struct ToDoListItemView: View {
             Spacer()
             
             Button {
-                //Mark done
+                toDolistItemViewModel.toggleIsDone(item: item)
             } label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
                     .foregroundColor(.teal)
                     .font(Font.system(size: 24))
             }
         }
-        .padding()
     }
 }
 
